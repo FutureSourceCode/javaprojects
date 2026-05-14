@@ -1,0 +1,41 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden !important;
+    height: 100vh !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    /* 加!important确保优先级 */
+    background: url('bg1.png') no-repeat center center fixed !important;
+    background-size: cover !important;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0) !important;
+    z-index: -1 !important;
+}
+
+* {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* 可选：内容过多时，仅内容区域滚动 */
+.content-scroll {
+    overflow-y: auto !important;
+    height: 100vh !important;
+    box-sizing: border-box !important;
+    padding: 20px !important;
+}
