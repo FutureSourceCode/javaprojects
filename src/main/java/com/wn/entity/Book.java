@@ -13,7 +13,6 @@ public class Book {
         private String author; // 作者
         private Integer stock; // 库存
 
-        // getter/setter
         public Integer getId() { return id; }
         public void setId(Integer id) { this.id = id; }
         public String getBookNo() { return bookNo; }

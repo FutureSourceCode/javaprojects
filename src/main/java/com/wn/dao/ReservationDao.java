@@ -56,7 +56,9 @@ public class ReservationDao {
         return reservations;
     }
 
-    // ReservationDao.java中的cancelReservation方法
+    /**
+     * 取消预约
+     */
     public boolean cancelReservation(String username, String bookName) throws SQLException {
         String sql = "DELETE FROM reservation WHERE username = ? AND book_name = ?";
         try (Connection conn = DBUtil.getConnection();

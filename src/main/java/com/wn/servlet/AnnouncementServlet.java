@@ -109,13 +109,13 @@ public class AnnouncementServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String path = request.getPathInfo();
 
-        // 普通发布公告（保留兼容）
+        // 普通发布公告
         if ("/add".equals(path)) {
             if (!checkAdminRole(request, response)) return;
             publishAnnouncement(request, response);
         }
 
-        // 管理员发布公告（集成在管理页）
+        // 管理员发布公告
         else if ("/admin/add".equals(path)) {
             if (!checkAdminRole(request, response)) return;
             publishAnnouncement(request, response);

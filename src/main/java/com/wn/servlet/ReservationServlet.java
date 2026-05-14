@@ -82,7 +82,7 @@ public class ReservationServlet extends HttpServlet {
             } catch (SQLException e) {
                 request.setAttribute("msg", "预约失败：" + e.getMessage());
             }
-            // 转发回图书查询页面（保持不变）
+            // 转发回图书查询页面
             try {
                 request.setAttribute("books", bookDao.findAll());
                 // 重新查询最新的预约列表（确保前端预约状态更新）

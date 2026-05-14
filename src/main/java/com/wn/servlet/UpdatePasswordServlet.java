@@ -22,7 +22,7 @@ import java.sql.SQLException;
 public class UpdatePasswordServlet extends HttpServlet {
     private UserDao userDao = new UserDao();
 
-    // 处理GET请求：跳转到修改密码页面
+    // 跳转到修改密码页面
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -37,7 +37,7 @@ public class UpdatePasswordServlet extends HttpServlet {
         request.getRequestDispatcher("/user/info/updatePwd.jsp").forward(request, response);
     }
 
-    // 处理POST请求：执行密码修改逻辑（保持不变）
+    // 执行密码修改
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();

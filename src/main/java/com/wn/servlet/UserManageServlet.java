@@ -20,7 +20,7 @@ public class UserManageServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 统一设置请求编码（防止中文乱码）
+        // 设置请求编码
         request.setCharacterEncoding("UTF-8");
 
         // 验证管理员权限，非管理员直接跳转登录页
@@ -28,7 +28,7 @@ public class UserManageServlet extends HttpServlet {
             return;
         }
 
-        // 获取请求路径（如/list、/delete）
+        // 获取请求路径
         String path = request.getPathInfo();
 
         // 处理用户列表/搜索请求

@@ -8,7 +8,6 @@ public class Reservation {
     private String userName;
     private Date reserveTime;
     private String status;
-    // getter和setter方法
 
     public Integer getId() {
         return id;

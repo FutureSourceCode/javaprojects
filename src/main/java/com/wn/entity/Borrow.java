@@ -15,7 +15,6 @@ public class Borrow {
         private Date returnData;  // 归还日期（null表示未归还）
         private String bookName;
 
-        // getter和setter方法
         public Integer getId() { return id; }
         public void setId(Integer id) { this.id = id; }
         public String getBookNo() { return bookNo; }

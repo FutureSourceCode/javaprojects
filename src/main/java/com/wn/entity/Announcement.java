@@ -14,7 +14,6 @@ public class Announcement {
     private String publisher;
     private Date publishTime;
 
-    // getter和setter方法
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 

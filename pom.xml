@@ -45,7 +45,7 @@
       <version>8.4.0</version>
     </dependency>
 
-    <!-- SLF4J API（如果已有则无需重复添加） -->
+    <!-- SLF4J API-->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>

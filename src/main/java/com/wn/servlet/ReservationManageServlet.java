@@ -44,7 +44,7 @@ public class ReservationManageServlet extends HttpServlet {
             // 预约列表
             handleReservationList(request, response);
         } else if ("/notify".equals(path)) {
-            // 提醒书籍到库（生成公告）
+            // 提醒书籍到库并生成公告
             handleNotifyArrival(request, response);
         }
     }
@@ -66,7 +66,7 @@ public class ReservationManageServlet extends HttpServlet {
     }
 
     /**
-     * 处理书籍到库提醒（生成公告）
+     * 处理书籍到库提醒并生成公告
      */
     private void handleNotifyArrival(HttpServletRequest request, HttpServletResponse response) throws IOException {
         try {

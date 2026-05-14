@@ -52,7 +52,7 @@
             </div>
         </c:if>
 
-        <!-- 修改密码表单：移除minlength限制 -->
+        <!-- 修改密码表单 -->
         <form action="${pageContext.request.contextPath}/user/updatePassword" method="post" onsubmit="return validateForm()">
             <div class="mb-3">
                 <label for="oldPwd" class="form-label">原密码：</label>

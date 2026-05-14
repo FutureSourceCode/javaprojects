@@ -5,7 +5,6 @@
     <title>图书查询</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* 修复模态框遮罩层覆盖问题 */
         .modal-backdrop {
             position: fixed;
             top: 0;
@@ -18,7 +17,6 @@
         .modal {
             z-index: 1050;
         }
-        /* 空数据样式优化 */
         .empty-data {
             text-align: center;
             color: #6c757d;
@@ -31,7 +29,7 @@
     <h3>图书查询</h3>
     <a href="${pageContext.request.contextPath}/user/login.jsp" class="btn btn-secondary mb-3">返回主页</a>
 
-    <!-- 提示弹窗：优化关闭逻辑和自动隐藏 -->
+    <!-- 提示弹窗 -->
     <c:if test="${not empty tipMsg}">
         <div class="modal-backdrop fade show"></div>
         <div class="modal fade show d-block" tabindex="-1" role="dialog">
@@ -95,7 +93,7 @@
                                 </form>
                             </c:if>
                             <c:if test="${book.stock == 0}">
-                                <!-- 优化预约状态判断逻辑 -->
+                                <!-- 预约状态判断 -->
                                 <c:set var="isReserved" value="false"/>
                                 <c:if test="${not empty reservedBooks}">
                                     <c:forEach items="${reservedBooks}" var="reservedBook">
@@ -141,7 +139,7 @@
 </div>
 
 <script>
-    // 关闭弹窗函数（同时移除遮罩层）
+    // 关闭弹窗函数
     function closeModal() {
         const modal = document.querySelector('.modal');
         const backdrop = document.querySelector('.modal-backdrop');
@@ -149,7 +147,7 @@
         if (backdrop) backdrop.remove();
     }
 
-    // 3秒后自动关闭弹窗（提升用户体验）
+    // 3秒后自动关闭弹窗
     setTimeout(() => {
         closeModal();
     }, 3000);

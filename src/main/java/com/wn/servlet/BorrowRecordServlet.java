@@ -35,7 +35,7 @@ public class BorrowRecordServlet extends HttpServlet {
             // 借阅记录列表+按借阅者查询
             handleBorrowList(request, response);
         } else if ("/remind".equals(path)) {
-            // 提醒还书（生成公告）
+            // 提醒还书并生成公告
             handleRemindReturn(request, response);
         }
     }
@@ -102,7 +102,7 @@ public class BorrowRecordServlet extends HttpServlet {
             request.getSession().setAttribute("errorMsg", "发送提醒失败：" + e.getMessage());
             e.printStackTrace();
         }
-        // 重定向回列表（保留查询条件）
+        // 重定向回列表
         String username = request.getParameter("username");
         String redirectUrl = request.getContextPath() + "/admin/borrow/list";
         if (username != null && !username.trim().isEmpty()) {
